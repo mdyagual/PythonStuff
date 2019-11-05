@@ -48,3 +48,12 @@ while not(municiones==0):
             print("El pato ya ha sido eliminado")
     else:
         print("Posición inválida. Intente de nuevo.")
+        
+#Resultado del juego una vez que paso 1 de los 2 siguientes casos:
+#Caso 1: Se le acabaron las municiones
+#Caso 2: Eliminó todos los patos
+if(municiones==0 and patos.count(0)<6):
+    print("Se ha quedado sin municiones. Juego terminado")
+elif(patos.count(0)==6):
+    print("Ha eliminado todos los patos")
+print(patos)

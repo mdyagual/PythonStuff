@@ -29,8 +29,22 @@ import random as r
 municiones=30
 
 patos=[]
-
+#Creando la lista con los "patos"
 while(len(patos)<6):
     patito=r.randint(1,6)
     if(patito not in patos):
         patos.append(patito)
+
+#Inicia el juego
+while not(municiones==0):
+    print(patos)
+    print("Tiros restantes: %d"%(municiones))
+    ingPos=int(input("Ingrese la posición a disparar"))-1
+    if(ingPos in list(range(1,7))):
+        if not(patos[ingPos]==0):
+            patos[ingPos]-=1
+            municiones-=1
+        else:
+            print("El pato ya ha sido eliminado")
+    else:
+        print("Posición inválida. Intente de nuevo.")

@@ -39,8 +39,8 @@ while(len(patos)<6):
 while not(municiones==0):
     print(patos)
     print("Tiros restantes: %d"%(municiones))
-    ingPos=int(input("Ingrese la posición a disparar"))-1
-    if(ingPos in list(range(1,7))):
+    ingPos=int(input("Ingrese la posición a disparar: "))-1
+    if(ingPos in list(range(len(patos)))):
         if not(patos[ingPos]==0):
             patos[ingPos]-=1
             municiones-=1

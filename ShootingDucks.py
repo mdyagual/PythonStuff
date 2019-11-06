@@ -39,7 +39,7 @@ while(len(patos)<6):
 while not(municiones==0):
     print(patos)
     print("Tiros restantes: %d"%(municiones))
-    ingPos=int(input("Ingrese la posición a disparar: "))-1
+    ingPos=int(input("Ingrese la posición a disparar: "))
     if(ingPos in list(range(len(patos)))):
         if not(patos[ingPos]==0):
             patos[ingPos]-=1
@@ -48,7 +48,7 @@ while not(municiones==0):
             print("El pato ya ha sido eliminado")
     else:
         print("Posición inválida. Intente de nuevo.")
-        
+print()        
 #Resultado del juego una vez que paso 1 de los 2 siguientes casos:
 #Caso 1: Se le acabaron las municiones
 #Caso 2: Eliminó todos los patos

@@ -54,6 +54,8 @@ print()
 #Caso 2: Eliminó todos los patos
 if(municiones==0 and patos.count(0)<6):
     print("Se ha quedado sin municiones. Juego terminado")
+    totPatosEliminados=patos.count(0)
+    print("Patos eliminados: %d"%(totPatosEliminados))
 elif(patos.count(0)==6):
     print("Ha eliminado todos los patos")
-print(patos)
+    print(patos)
